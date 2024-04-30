@@ -14,8 +14,9 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.logo.nasa:hover {
+  /* filter: drop-shadow(0 0 2em #0f3a97); */
+  filter: drop-shadow(0 0 2em hsl(221, 82%, 35%));
 }
 
 @keyframes logo-spin {
