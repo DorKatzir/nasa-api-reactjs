@@ -6,10 +6,9 @@ import Footer from './components/Footer';
 export default function App() {
     return (
         <>
-            <SideBar>
-                
-            </SideBar>
             <Main />
+            <SideBar>    
+            </SideBar>
             <Footer /> 
         </>
     )
