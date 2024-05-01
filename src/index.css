@@ -131,6 +131,26 @@ footer button:hover{
   opacity: .7;
 }
 
+.loadingState{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.loadingState i{
+  opacity: .2;
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 @media (min-width: 640px){
   .sidebar{
     position: relative;
@@ -145,3 +165,4 @@ footer button:hover{
     max-width: unset;
   }
 }
+

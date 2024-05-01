@@ -37,9 +37,14 @@ export default function App() {
     
     return (
         <>
-            <Main />
-            { showModal && (<SideBar toggleModal={handleToggleModal} />) }
-            <Footer toggleModal={handleToggleModal} /> 
+            { data 
+                ? <Main /> 
+                : <div className='loadingState'><i className="fa-solid fa-gear"></i></div>
+            }
+
+            { showModal && <SideBar toggleModal={handleToggleModal} /> }
+
+            { data && <Footer toggleModal={handleToggleModal} /> }
         </>
     )
 }
