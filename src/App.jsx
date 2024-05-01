@@ -22,8 +22,7 @@ export default function App() {
                 const apiData = await res.json()
                 // console.log(apiData)
                 setData(apiData)
-
-                 
+   
             }catch(err){
                 console.log(err.message)
             }
@@ -37,7 +36,7 @@ export default function App() {
     return (
         <>
             { data 
-                ? <Main /> 
+                ? <Main data={data} /> 
                 : <div className='loadingState'><i className="fa-solid fa-gear"></i></div>
             }
 
