@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 
 export default function App() {
 
+    const [data, setData] = useState(null) 
+    const [loading, setLoading] = useState(false)
     const  [showModal, setShowModal] = useState(false)
     
     function handleToggleModal(){
@@ -18,9 +20,10 @@ export default function App() {
             const url = 'https://api.nasa.gov/planetary/apod'+`?api_key=${NASA_KEY}`
             try{
                 const res = await fetch(url)
-                const data = res.json()
-                // console.log('DATA\n', data)
-                console.log(data)
+                const apiData = res.json()
+                // console.log(apiData)
+                setData(apiData)
+                console.log(apiData)  
 
             }catch(err){
                 console.log(err.message)
