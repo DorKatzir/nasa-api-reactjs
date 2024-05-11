@@ -33,7 +33,9 @@ export default function App() {
             try{
                 const res = await fetch(url)
                 const apiData = await res.json()
-                // console.log(apiData)
+                if(apiData.media_type === 'video'){
+                    return
+                }
                 localStorage.setItem(localKey, JSON.stringify(apiData))
                 setData(apiData)
                 console.log('Fetched from API today')
