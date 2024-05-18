@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import Main from './components/Main'
-import SideBar from './components/SideBar';
-import Footer from './components/Footer';
+import SideBar from './components/SideBar'
+import Footer from './components/Footer'
+
+const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
 
 export default function App() {
 
@@ -12,19 +14,20 @@ export default function App() {
     function handleToggleModal(){
         setShowModal(!showModal)
     }
-    const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
+    
     
     useEffect(()=>{
+        
+        const url = 'https://api.nasa.gov/planetary/apod'+`?api_key=${NASA_KEY}`
 
         async function fetchApiData() {
-            const url = 'https://api.nasa.gov/planetary/apod'+`?api_key=${NASA_KEY}`
 
             const today = (new Date()).toDateString()
             const localKey = `NASA-${today}`
             if (localStorage.getItem(localKey)){
                 const apiData = JSON.parse(localStorage.getItem(localKey))
                 setData(apiData)
-                console.log('Fetched from cach')
+                console.log('Fetched from todays Cach')
                 return
             }
 
@@ -38,6 +41,7 @@ export default function App() {
                 
                 if(apiData.media_type !== 'image'){
                     setData(cach)
+                    console.log('Fetched from yesturdays Cach because no video display avaliable')
                     return
                 }
 
@@ -52,7 +56,8 @@ export default function App() {
         }
 
         fetchApiData()
-    },[NASA_KEY])
+
+    },[cach, data])
 
     
     return (
