@@ -33,3 +33,7 @@
         <a href="https://api.nasa.gov/" target="_blank">NASA</a>
     </li>
 </ul>
+
+
+### Thanks to:
+<a href="https://www.youtube.com/watch?v=82PXenL4MGg&t=847s" target="_blank">smoljames youtube channel</a>
