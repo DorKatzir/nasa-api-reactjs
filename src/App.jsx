@@ -6,16 +6,15 @@ import Footer from './components/Footer';
 export default function App() {
 
     const [data, setData] = useState(null) 
-    // const [loading, setLoading] = useState(false)
+    const [cach, setCash] = useState(null)
     const  [showModal, setShowModal] = useState(false)
     
     function handleToggleModal(){
         setShowModal(!showModal)
     }
+    const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
     
     useEffect(()=>{
-
-        const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
 
         async function fetchApiData() {
             const url = 'https://api.nasa.gov/planetary/apod'+`?api_key=${NASA_KEY}`
@@ -25,19 +24,26 @@ export default function App() {
             if (localStorage.getItem(localKey)){
                 const apiData = JSON.parse(localStorage.getItem(localKey))
                 setData(apiData)
-                console.log('Fetched from cach today')
+                console.log('Fetched from cach')
                 return
             }
+
+            setCash(data)
             localStorage.clear()
 
             try{
+
                 const res = await fetch(url)
                 const apiData = await res.json()
+                
                 if(apiData.media_type === 'video'){
+                    setData(cach)
                     return
                 }
+
                 localStorage.setItem(localKey, JSON.stringify(apiData))
                 setData(apiData)
+                console.log(apiData)
                 console.log('Fetched from API today')
    
             }catch(err){
@@ -46,7 +52,7 @@ export default function App() {
         }
 
         fetchApiData()
-    },[])
+    },[NASA_KEY])
 
     
     return (
