@@ -36,7 +36,7 @@ export default function App() {
                 const res = await fetch(url)
                 const apiData = await res.json()
                 
-                if(apiData.media_type === 'video'){
+                if(apiData.media_type !== 'image'){
                     setData(cach)
                     return
                 }
