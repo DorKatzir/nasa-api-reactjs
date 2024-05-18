@@ -1,15 +1,22 @@
 # Nasa App
 
-## Space Gallery website that displays NASA's picture of the day - <a href="https://dorkatzir.github.io/nasa-api-reactjs/" target="_blank">live Demo</a>
-
-###  React.JS app with Nasa API and Local Storage 
-
-
- 
+## Space Gallery website that displays NASA's picture of the day
 
 ### Screenshot:
-
+<a href="https://dorkatzir.github.io/nasa-api-reactjs/" target="_blank">live Demo</a>
 <p align="center"><img src="./screenshot.png" alt="project screenshot"></p>
+
+
+### Built with:
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>React.JS</li>
+    <li>Nasa API</li>
+    <li>Localstorage Cach</li>
+</ul>
+
+###  R app with  and Local Storage 
 
 
 ### Resources:
