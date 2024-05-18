@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react'
 import Main from './components/Main'
 import SideBar from './components/SideBar'
@@ -57,7 +58,7 @@ export default function App() {
 
         fetchApiData()
 
-    },[cach, data])
+    },[])
 
     
     return (
