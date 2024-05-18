@@ -41,4 +41,8 @@
 
 
 ### Thanks to:
-<a href="https://www.youtube.com/watch?v=82PXenL4MGg&t=847s" target="_blank">smoljames youtube channel</a>
+<ul>
+    <li>
+        <a href="https://www.youtube.com/watch?v=82PXenL4MGg&t=847s" target="_blank">smoljames youtube channel</a>
+    </li>
+</ul>
