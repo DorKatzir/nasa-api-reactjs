@@ -16,8 +16,6 @@
     <li>Localstorage Cach</li>
 </ul>
 
-###  R app with  and Local Storage 
-
 
 ### Resources:
 <ul>
