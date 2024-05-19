@@ -41,6 +41,7 @@
 .bgVideo {
   width: 100% !important;
   height: 100% !important;
+  aspect-ratio: 16/9;
   flex: 1;
   overflow: hidden;
   /* object-fit: cover; */

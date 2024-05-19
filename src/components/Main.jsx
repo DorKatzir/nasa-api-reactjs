@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import ReactPlayer from 'react-player'
+
+import ReactPlayer from 'react-player/youtube'
 
 export default function Main({ data }) {
     
@@ -14,7 +15,7 @@ export default function Main({ data }) {
             }
 
             {
-                data?.media_type === 'video' && <ReactPlayer className='bgVideo' url={ data?.url} controls={true} />
+                data?.media_type === 'video' && <ReactPlayer url={ data?.url} playsinline={true} controls={false} light={true} muted={true} width='100%' height='100%'/>
             }
   
         </div>
